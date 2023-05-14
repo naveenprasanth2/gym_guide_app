@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gym_guide_app/data/exercise.dart';
 import 'package:gym_guide_app/model/workout_category_model.dart';
 import 'package:gym_guide_app/pages/exercise_list_page.dart';
 
@@ -15,8 +16,14 @@ class WorkoutCategoryWidget extends StatelessWidget {
         InkWell(
           onTap: () {
             //the below line helps in sending the arguments without constructor
-            Navigator.of(context).pushNamed(ExerciseListPage.routeName,
-                arguments: workoutCategoryModel.categoryName);
+            Navigator.of(context)
+                .pushNamed(ExerciseListPage.routeName, arguments: {
+              "title": workoutCategoryModel.categoryName,
+              "listOfExercise": exerciseList
+                  .where((element) =>
+                      element.name == workoutCategoryModel.categoryName)
+                  .toList()
+            });
           },
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
