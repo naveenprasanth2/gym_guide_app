@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gym_guide_app/pages/exercise_detail_page.dart';
 import 'package:gym_guide_app/pages/exercise_list_page.dart';
 
 import 'pages/my_home_page.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         MyHomePage.routeName : (context) => const MyHomePage(),
         ExerciseListPage.routeName: (context) => const ExerciseListPage(),
+        ExerciseDetailPage.routeName: (context) => const ExerciseDetailPage(),
       },
     );
   }

@@ -14,7 +14,7 @@ List<ExerciseModel> exerciseList = [
     duration: '30 seconds',
     imageUrl:
     'https://qph.cf2.quoracdn.net/main-qimg-6225bc728e7f865437fdf17cd93d2485',
-    equipment: ['Lat Pulldown Machine, summa'],
+    equipment: ['Lat Pulldown Machine'],
     targetMuscles: ['Lats', 'Upper Back', 'Biceps'],
     difficulty: 3,
   ),

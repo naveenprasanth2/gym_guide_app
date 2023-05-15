@@ -21,7 +21,7 @@ class WorkoutCategoryWidget extends StatelessWidget {
               "title": workoutCategoryModel.categoryName,
               "listOfExercise": exerciseList
                   .where((element) =>
-                      element.name == workoutCategoryModel.categoryName)
+                      element.category == workoutCategoryModel.categoryName)
                   .toList()
             });
           },
@@ -52,7 +52,7 @@ class WorkoutCategoryWidget extends StatelessWidget {
                             workoutCategoryModel.categoryName,
                             style: const TextStyle(
                                 color: Colors.white,
-                                fontSize: 25,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold,
                                 fontStyle: FontStyle.italic),
                           ),
